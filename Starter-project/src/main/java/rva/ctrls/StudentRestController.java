@@ -48,7 +48,7 @@ public class StudentRestController {
 		return studentRepository.getOne(id);
 	}
 	
-	@GetMapping("studentDepartman/{departman}")
+	@GetMapping("studentDepartman/{id}")
 	@ApiOperation(value = "Vraca studenta iz baze podataka cija je ID vrednost departmana prosledjena kao PATH varijabla")
 	public Collection<Student> getStudentByDepartman(@PathVariable("id") Integer id){
 		Departman d= departmanRepository.getOne(id);
